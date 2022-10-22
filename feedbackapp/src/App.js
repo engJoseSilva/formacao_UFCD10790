@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Media from "./componentes/Media";
+import Comentario from "./componentes/Comentario";
 
 
 function App() {
@@ -56,7 +57,9 @@ function App() {
         ))}
       </ul>
 
-      <h5>
+
+      <Comentario />
+      {/* <h5>
         {" "}
         {atencao.toUpperCase()} : {comentarios.length}{" "}
       </h5>
@@ -64,7 +67,7 @@ function App() {
         {comentarios2.map((comentario) => (
           <li key={comentario.id}>{comentario.texto}</li>
         ))}
-      </ul>
+      </ul> */}
     </>
   );
 }
