@@ -1,3 +1,9 @@
+var express = require('express')
+var cors = require('cors')
+var app = express();
+
+app.use(cors())
+
 const FeedbackData  = [
     {
         id: 1,
@@ -26,4 +32,14 @@ const FeedbackData  = [
     }
 ];
 
-export default FeedbackData;
+app.get("/", function(req,res){
+    res.send("Hello World")
+});
+
+app.get("/feedback", function(req,res){
+    res.send(FeedbackData)
+});
+
+app.listen(3002, function(){
+    console.log("# Running")
+})

@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
-import {FaTimes} from "react-icons/fa";
-
-function FeedbackItem({item, handleDelete}) {
-
+import React, { useState } from "react";
+import { FaTimes } from "react-icons/fa";
+import Card from "./shared/Card";
+function FeedbackItem({ item, handleDelete }) {
   return (
-    <div className='card'>
-        <div className='num-display'> {item.pontuacao}</div>
-        <div className='text-display'>  {item.texto}</div>
-        <button onClick={()=> handleDelete(item.id)} className="close">
-            <FaTimes/>
-        </button>
-    </div>
-  )
+    <Card reverse={false}>
+      <div className="num-display"> {item.pontuacao}</div>
+      <div className="text-display">  {item.texto}</div>
+      <button onClick={() => handleDelete(item.id)} className="close">
+        <FaTimes />
+      </button>
+    </Card>
+  );
 }
 
-export default FeedbackItem
+export default FeedbackItem;
